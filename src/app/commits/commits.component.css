@@ -1,0 +1,14 @@
+.s {
+    margin-left: 0%;
+    width: 100%;
+    background-color: rgb(223, 219, 219);
+}
+
+#scroll {
+    height: 300px;
+    overflow: auto;
+}
+
+#fixed {
+    position: sticky;
+}

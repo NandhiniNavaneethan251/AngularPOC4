@@ -1,0 +1,37 @@
+<div class="container">
+
+    <form [formGroup]="dateForm" (ngSubmit)="onSubmit()">
+
+        <table class="table table-bordered" formArrayName="quantities">
+            <tr>
+                <th colspan="2">Add Date Filter</th>
+                <th width="150px"><button type="button" [disabled]="count==5" (click)="addDateFilter()" class="btn btn-primary">Add More</button></th>
+            </tr>
+            <tr *ngFor="let filter of datefilter().controls; let i=index" [formGroupName]="i">
+                <td>
+                    <mat-form-field appearance="fill" style="width:150px;margin-left: 0%;">
+                        <mat-label>From</mat-label>
+                        <input matInput [matDatepicker]="picker" [(ngModel)]="min">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field appearance="fill" style="width:150px; margin-left:0%">
+                        <mat-label>To</mat-label>
+                        <input matInput [matDatepicker]="picker1" [min]="min">
+                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                    </mat-form-field>
+                </td>
+
+                <td>
+                    <button (click)="removeDateFilter(i)" class="btn btn-danger">Remove</button>
+                </td>
+            </tr>
+        </table>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+
+    </form>
+</div>

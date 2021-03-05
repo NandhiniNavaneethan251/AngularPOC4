@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+#div1 {
+    text-align: center;
+    background-color: rgb(23, 11, 192);
+    width: 100%;
+    height: 4em;
+    color: rgba(252, 252, 252, 0.973);
+}
+
+#div2 {
+    background-color: rgb(223, 219, 219);
+    width: 100%;
+    height: 5em;
+}
+
+ng-select {
+    border-color: #467dd1;
+    border-radius: 3%;
+    width: 15%;
+    margin-left: 43%;
+}
+
+ng-option {
+    border-color: #467dd1;
+    width: 15%;
+    float: right;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
